@@ -1,0 +1,309 @@
+body{
+    margin:0;
+    padding:0;
+    background: whitesmoke;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#app{
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin:auto;
+}
+
+header {
+    width:100%;
+    background-color: rgb(10, 28, 46);
+    height:100px;
+    display:flex;
+    align-items: center;
+    position:fixed;
+    
+}
+
+#menu-btn{
+    display:none;
+}
+
+nav {
+    width:100%; 
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    width:100%;
+    justify-content: flex-end;
+}
+
+nav ul li{
+    margin-right:2%;
+    font-size:1.2em;
+}
+nav ul li a{
+    color:whitesmoke;
+}
+
+
+.title{
+    text-align:center;
+    color:teal;
+    width:100%;
+}
+
+
+/*About*/
+#about{
+    margin-top:150px;
+    display:flex;
+    flex-direction: column;
+    width:80%;
+    justify-content: center;
+}
+
+#about #content{
+    width:100%;
+    display:flex;
+}
+
+#about #content img{
+    width:20vh;
+    height:20vh;
+    max-width:300px;
+    max-height:300px;
+    border-radius: 50%;
+}
+
+#about #content #information{
+    display:flex;
+    flex-direction: column;
+    margin-left:1%;
+}
+
+#about #content #information p{
+    margin:.5%;
+    font-size:1.1em;
+    text-align: justify;
+}
+
+
+
+/*technologies*/
+#technologies{
+    display:flex;
+    width:100%;
+    flex-direction: column;
+}
+#technologies #content{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box{
+    width:25%;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin:2%;
+    box-shadow: 5px 5px 10px 3px rgb(194, 194, 194);
+    padding:1%;
+    transition:.5s;
+    font-size:1.2em;
+    flex-grow: 1;
+
+}
+.box:hover{
+    box-shadow: 10px 10px 10px 10px rgb(194, 194, 194);
+}
+
+.box img{
+    width:300px;
+    height:auto;
+    margin:auto;
+}
+
+#technologies #content .box #information{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    text-align: left;
+}
+
+#technologies #content .box #information #skills{
+    font-size:1.1em;
+    display:flex;
+    flex-direction: column;
+    text-align:left;
+
+}
+
+
+/*projects*/
+#projects{
+    display:flex;
+    width:100%;
+    flex-direction: column;
+    margin-bottom:10vh;
+}
+
+#projects #projects-list{
+    display:flex;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#projects #projects-list .box #information{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#projects #projects-list .links{
+    margin-top:2%;
+}
+
+#projects #projects-list .links span{
+    margin-right:2%;
+}
+
+/*contacts*/
+#contacts{
+    display:flex;
+    width:100%;
+    flex-direction:column;
+    box-shadow: 5px 5px 10px 3px rgb(194, 194, 194);
+    width:80%;
+    position: fixed;
+    bottom:0;
+    background-color: white;
+    margin:auto;
+    
+}
+#contacts #contacts-list{
+    display:flex;
+    
+}
+#contacts #contacts-list ul {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height:100%;
+    
+    justify-content: center;
+}
+#contacts #contacts-list ul li{
+    margin-right:5%;
+}
+
+
+
+/*Responsivo*/
+
+@media screen and (max-width: 1000px){
+    .box{
+        width:30%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .box{
+        width:35%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .box{
+        width:40%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .box{
+        width:45%;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    #about #content{
+        flex-direction: column;
+    }
+    #about #content img{
+        margin:auto;
+        margin-bottom:2%;
+    }
+    .box{
+        width:80%;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px){
+    header {
+        width:100%;
+        background-color: rgb(10, 28, 46);
+        min-height:50px;
+        height:auto;
+        display:flex;
+        align-items: center;
+        position:fixed; 
+        z-index: 1;
+    }
+    #menu-btn{
+        display:block;
+        position: absolute;
+        align-self: flex-start;
+        margin-top:5%;
+    }
+    nav {
+        width:100%;
+        height:100vh;
+        display: none;
+        align-items: flex-start;
+        margin-top:20%;
+    }
+    
+    nav ul{
+        display: flex;
+       flex-direction: column; 
+        width:100%;
+        justify-content: flex-end;
+        margin:0;
+    }
+    
+    nav ul li{
+        margin-right:2%;
+        font-size:1.3em;
+        margin-bottom:5%;
+    }
+    nav ul li a{
+        color:whitesmoke;
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 300px){
+    .box{
+        width:90%;
+    }
+}
